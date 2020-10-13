@@ -17,6 +17,7 @@
 				href="#" data-toggle="modal" data-target="#cadastroModal">Cadastre-se
 					<span class="sr-only"></span>
 			</a></li>
+			<li class="nav-item active"><button id="enviar">enviar</button></li>
 		</ul>
 	</div>
 	</nav> </header>
@@ -105,5 +106,32 @@
 	</div>
 
 </body>
+<script>
+    $(document).ready(function(){
+        $("#enviar").click(function(event){
+        	console.log("entrou na função")
+            $.ajax({
+                url: "Controller",
+                type: 'POST',
+                data:{
+                    nome: 'admin',
+                    email: 'admin',
+                    senha: '123',
+                    ddd: 11,
+            		numero: 88888888,
+            		tipo: "fixo",
+            		ddd2: 11,
+            		numero2: 88888888,
+            		tipo2: "fixo",
+                    cmd: "cadastrar"
+                },
+                success: function(data) {
+                    session = data.session;
+                    console.log(data);
+                }
+            });
+        });
+    });
+</script>
 
 </html>

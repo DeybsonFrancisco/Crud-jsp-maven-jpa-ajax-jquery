@@ -21,7 +21,7 @@ public class UsuarioDAO {
 		this.em = emf.createEntityManager();
 	}
 
-	public void salvarUsuario(Usuario usuario) {
+	public Usuario salvarUsuario(Usuario usuario) {
 
 		this.em = emf.createEntityManager();
 
@@ -35,10 +35,12 @@ public class UsuarioDAO {
 			em.getTransaction().commit();
 
 			em.close();
+			return usuario;
 
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			em.getTransaction().rollback();
+			return null;
 		}
 
 	}
