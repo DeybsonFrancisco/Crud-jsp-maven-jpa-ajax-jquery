@@ -1,11 +1,11 @@
-package Base;
+package base;
 
 
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Models.Usuario;
+import models.Usuario;
 
 public interface BaseCommand {
 

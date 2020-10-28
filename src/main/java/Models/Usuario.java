@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 @Table(name = "usuario")
 public class Usuario {
@@ -22,16 +24,18 @@ public class Usuario {
 	@Id
 	@Column(name="id_Usuario")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Expose
 	private Long id;
 	
+	@Expose
 	private String nome;
 	
-
+	@Expose
 	private String email;
 	
-
 	private String senha;
-
+	
+	@Expose
 	@OneToMany(mappedBy="usuario", fetch=FetchType.EAGER)
 	private List<Telefone> telefone;
 	

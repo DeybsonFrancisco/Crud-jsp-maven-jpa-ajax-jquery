@@ -1,4 +1,4 @@
-package DAO;
+package dao;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import Models.Telefone;
-import Models.Usuario;
+import models.Telefone;
+import models.Usuario;
 
 public class UsuarioDAO {
 

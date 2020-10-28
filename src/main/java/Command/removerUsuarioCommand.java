@@ -1,16 +1,16 @@
-package Command;
+package command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Base.BaseCommand;
-import DAO.UsuarioDAO;
+import base.BaseCommand;
+import dao.UsuarioDAO;
 
-public class removerUsuarioCommand implements BaseCommand{
+public class RemoverUsuarioCommand implements BaseCommand{
 	
 	private UsuarioDAO dao;
 	
-	public removerUsuarioCommand(UsuarioDAO dao) {
+	public RemoverUsuarioCommand(UsuarioDAO dao) {
 		this.dao = dao;
 	}
 

@@ -1,4 +1,4 @@
-package Controllers;
+package controllers;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -9,14 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Base.BaseCommand;
-import Command.alterarUsuarioCommand;
-import Command.buscarUsuarioCommand;
-import Command.cadastroUsuarioCommand;
-import Command.listarUsuarioCommand;
-import Command.removerUsuarioCommand;
-import DAO.UsuarioDAO;
-import Models.Usuario;
+import base.BaseCommand;
+import command.AlterarUsuarioCommand;
+import command.BuscarUsuarioCommand;
+import command.CadastroUsuarioCommand;
+import command.ListarUsuarioCommand;
+import command.RemoverUsuarioCommand;
+import dao.UsuarioDAO;
+
 
 /**
  * Servlet implementation class Controller
@@ -33,11 +33,11 @@ public class Controller extends HttpServlet {
     }
     protected Map<String, BaseCommand> getAcoes(){
     	Map<String, BaseCommand> acoes = new HashMap<String, BaseCommand>();
-    	acoes.put("cadastrar", new cadastroUsuarioCommand(new UsuarioDAO()));
-    	acoes.put("consultar", new buscarUsuarioCommand(new UsuarioDAO()));
-    	acoes.put("listar", new listarUsuarioCommand(new UsuarioDAO()));
-    	acoes.put("alterar", new alterarUsuarioCommand(new UsuarioDAO()));
-    	acoes.put("remover", new removerUsuarioCommand(new UsuarioDAO()));
+    	acoes.put("cadastrar", new CadastroUsuarioCommand(new UsuarioDAO()));
+    	acoes.put("buscar", new BuscarUsuarioCommand(new UsuarioDAO()));
+    	acoes.put("listar", new ListarUsuarioCommand(new UsuarioDAO()));
+    	acoes.put("alterar", new AlterarUsuarioCommand(new UsuarioDAO()));
+    	acoes.put("remover", new RemoverUsuarioCommand(new UsuarioDAO()));
     	return acoes;
     }
 
