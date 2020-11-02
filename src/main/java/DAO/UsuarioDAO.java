@@ -90,14 +90,15 @@ public class UsuarioDAO {
 		}
 	}
 
-	public void excluirUsuario(Usuario usuario) {
+	public void removerUsuario(Long id) {
 
 		this.em = emf.createEntityManager();
 
 		try {
-			Usuario ur = em.find(Usuario.class, usuario.getId());
+			Usuario u = em.find(Usuario.class, id);
+			System.out.println(u);
 			em.getTransaction().begin();
-			em.remove(ur);
+			em.remove(u);
 			em.getTransaction().commit();
 
 		} catch (Exception ex) {

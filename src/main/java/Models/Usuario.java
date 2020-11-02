@@ -36,7 +36,7 @@ public class Usuario {
 	private String senha;
 	
 	@Expose
-	@OneToMany(mappedBy="usuario", fetch=FetchType.EAGER)
+	@OneToMany(mappedBy="usuario", fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 	private List<Telefone> telefone;
 	
 	public Usuario() {};
