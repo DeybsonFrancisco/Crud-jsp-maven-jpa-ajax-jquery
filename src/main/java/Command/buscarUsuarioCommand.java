@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 
 import base.BaseCommand;
 import dao.UsuarioDAO;

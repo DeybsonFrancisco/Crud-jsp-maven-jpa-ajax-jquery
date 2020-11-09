@@ -4,9 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import base.BaseCommand;
-import bind.UsuarioBind;
 import dao.UsuarioDAO;
-import models.Usuario;
 
 public class RemoverUsuarioCommand implements BaseCommand{
 	

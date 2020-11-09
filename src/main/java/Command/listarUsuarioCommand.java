@@ -8,13 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
 import base.BaseCommand;
 import dao.UsuarioDAO;
 import models.Usuario;
-import net.bytebuddy.description.type.TypeVariableToken;
 
 public class ListarUsuarioCommand implements BaseCommand {
 	

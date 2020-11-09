@@ -108,7 +108,6 @@
 
 </body>
 <script>
-	$(document).ready(function() {
 		$("#formCadastro").submit(function(event) {
 			event.preventDefault();
 						
@@ -122,7 +121,6 @@
 			$(".modal-dialog").remove()
 			$("#cadastroModal").append("<div class='d-flex justify-content-center'><div class='spinner-border text-danger' role='status'><span class='sr-only'>Loading...</span></div></div>")
 
-			console.log(nome, email, senha, ddd, numero, tipo )
 			$.ajax({
 				url : "Controller",
 				type : 'POST',
@@ -141,7 +139,6 @@
 				}
 			});
 		});
-	});
 </script>
 
 </html>
